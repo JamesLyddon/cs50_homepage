@@ -1,13 +1,13 @@
 *{
-    /* box-sizing: border-box; */
     margin: 0;
     padding: 0;
 }
 
 body {
-    /* background-color: aquamarine; */
     margin-top: 1rem;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-family: 'Nerko One', cursive;
+    background-image: linear-gradient(#000, #333);
+    height: 98vh;
 }
 
 ul {
@@ -16,6 +16,7 @@ ul {
     margin: 1rem 3rem;
     display: flex;
     justify-content: space-around;
+    gap: 0.5em;
 }
 
 a {
@@ -24,12 +25,22 @@ a {
 }
 
 header {
-    /* background-color: yellow; */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 5em;
+    max-width: 65em;
+}
+
+header h1 {
     padding: 1rem;
+    font-size: 4em;
+    text-transform: uppercase;
+    color: var(--title, dodgerblue);
+    text-shadow: 1px 1px 2px black;
 }
 
 main {
-    /* background-color: red; */
     margin: 0 auto;
 
 }
@@ -38,45 +49,74 @@ main {
     display: flex;
     flex-direction: column;
     width: 80%;
-    /* background-color: blueviolet; */
     margin-inline: auto;
     text-align: center;
-}
-
-.content {
-    /* width: 80%; */
-    display: flex;
-    flex-direction: column;
-    /* justify-content: center; */
     align-items: center;
 }
 
-/* snake css */
-
-.start {
-    margin: 1rem;
-}
-
-.grid {
-    width: 200px;
-    height: 200px;
+.content {
     display: flex;
-    flex-wrap: wrap;
-    outline: auto;
-    align-self: center;
+    flex-direction: column;
+    align-items: center;
 }
 
-.grid div {
-    width: 20px;
-    height: 20px;
+/* emo styling */
 
-    z-index: -1;
+#emoji {
+    font-size: 8em;
+    margin: 0.5em;
 }
 
-.snake {
-    background-color: tomato;
+.bop {
+    animation: bop 0.5s ease-in-out;
 }
 
-.apple {
-    background-color: chartreuse;
+.emo-btns {
+    transform: scale(1.5);
 }
+
+nav {
+    display: flex;
+    justify-content: center;
+    max-width: 60em;
+}
+
+nav ul {
+    gap: 3em;
+}
+
+nav ul li {
+    color: #eeeee4;
+    font-size: 1.4em;
+}
+
+
+/* animations */
+
+@keyframes bop{
+    0%{
+      transform: translateY(0px);
+    }
+    10% {
+        transform: translateY(10px);
+    }
+    15% {
+        transform: translateY(11px);
+    }
+    40% {
+        transform: translateY(-20px);
+    }
+    70% {
+        transform: translateY(-25px);
+    }
+    90% {
+        transform: translateY(10px);
+    }
+    98% {
+        transform: translateY(-5px);
+    }
+    100%{
+      transform: translateY(0px);
+    }
+  }
+  
