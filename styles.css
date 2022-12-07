@@ -1,0 +1,82 @@
+*{
+    /* box-sizing: border-box; */
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    /* background-color: aquamarine; */
+    margin-top: 1rem;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+    margin: 1rem 3rem;
+    display: flex;
+    justify-content: space-around;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+header {
+    /* background-color: yellow; */
+    padding: 1rem;
+}
+
+main {
+    /* background-color: red; */
+    margin: 0 auto;
+
+}
+
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+    /* background-color: blueviolet; */
+    margin-inline: auto;
+    text-align: center;
+}
+
+.content {
+    /* width: 80%; */
+    display: flex;
+    flex-direction: column;
+    /* justify-content: center; */
+    align-items: center;
+}
+
+/* snake css */
+
+.start {
+    margin: 1rem;
+}
+
+.grid {
+    width: 200px;
+    height: 200px;
+    display: flex;
+    flex-wrap: wrap;
+    outline: auto;
+    align-self: center;
+}
+
+.grid div {
+    width: 20px;
+    height: 20px;
+
+    z-index: -1;
+}
+
+.snake {
+    background-color: tomato;
+}
+
+.apple {
+    background-color: chartreuse;
+}
