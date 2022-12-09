@@ -3,6 +3,10 @@
     padding: 0;
 }
 
+html {
+    background-color: #000;
+}
+
 body {
     margin-top: 1rem;
     font-family: 'Nerko One', cursive;
@@ -71,7 +75,7 @@ main {
     animation: bop 0.5s ease-in-out;
 }
 
-.emo-btns {
+.big-btns {
     transform: scale(1.5);
 }
 
@@ -90,6 +94,23 @@ nav ul li {
     font-size: 1.4em;
 }
 
+
+/* pixel styles */
+#pixel-display {
+    border: none;
+    width: 400px;
+    height: 400px;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+canvas {
+    background-color: #fff;
+    padding: 0;
+    margin: 0;
+    height: 50px;
+    width: 50px;
+}
 
 /* animations */
 
