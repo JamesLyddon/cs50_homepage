@@ -42,3 +42,30 @@ resetBtn.addEventListener('click', e => {
         pixel.style.backgroundColor = '#FAF8F6'
     })
 })
+
+// drag
+
+let mouseDown = false
+
+pixelDisplay.addEventListener('mousedown', e => {
+    mouseDown = true
+    console.log(mouseDown)
+})
+
+pixelDisplay.addEventListener('mouseup', e => {
+    mouseDown = false
+    console.log(mouseDown)
+})
+
+let pixels = Array.from(pixelDisplay.children);
+
+pixels.forEach(pixel => pixel.addEventListener('mouseenter', e => {
+    if (mouseDown) {
+        e.target.style.backgroundColor = colorSelection[e.target.attributes.currentColor]
+        if (e.target.attributes.currentColor < 6) {
+            e.target.attributes.currentColor++
+        } else {
+            e.target.attributes.currentColor = 0
+        }
+    }
+}))
