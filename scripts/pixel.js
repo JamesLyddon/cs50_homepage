@@ -43,18 +43,16 @@ resetBtn.addEventListener('click', e => {
     })
 })
 
-// drag
+// click and drag
 
 let mouseDown = false
 
 pixelDisplay.addEventListener('mousedown', e => {
     mouseDown = true
-    console.log(mouseDown)
 })
 
 pixelDisplay.addEventListener('mouseup', e => {
     mouseDown = false
-    console.log(mouseDown)
 })
 
 let pixels = Array.from(pixelDisplay.children);

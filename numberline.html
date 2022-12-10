@@ -8,9 +8,9 @@
 <link href="https://fonts.googleapis.com/css2?family=Nerko+One&display=swap" rel="stylesheet">
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
-        <script src="scripts/emo.js" defer></script>
+        <script src="scripts/number.js" defer></script>
         <link href="styles/styles.css" rel="stylesheet">
-        <title>Toys for Jude - Emotions</title>
+        <title>Toys for Jude - Number Line</title>
     </head>
     <body>
         <div class="wrapper">
@@ -27,15 +27,14 @@
             </header>
             <main>
                 <div class="content">
-                    <div id="emoji">
-                        😐
+                    <div id="currentNumber">
+                        0
                     </div>
+                    <div id="line"></div>
+                    <div id="pointer"></div>
                     <ul class="big-btns"> 
-                        <li><button id="angry" type="button" class="btn btn-danger start">angry</button></li>
-                        <li><button id="sad" type="button" class="btn btn-warning start">sad</button></li>
-                        <li><button id="neutral" type="button" class="btn btn-primary start">neutral</button></li>
-                        <li><button id="happy" type="button" class="btn btn-info start">happy</button></li>
-                        <li><button id="silly" type="button" class="btn btn-success start">silly</button></li>
+                        <li><button id="minus" type="button" class="btn btn-danger start">-</button></li>
+                        <li><button id="plus" type="button" class="btn btn-success start">+</button></li>
                     </ul>
                 </div>
             </main> 
