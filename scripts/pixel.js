@@ -1,7 +1,9 @@
 const pixelDisplay = document.querySelector('#pixel-display')
 const resetBtn = document.querySelector('#reset')
 
-const colorSelection = ['#1D1C1A', '#ffdfba', '#ffffba', '#baffc9', '#bae1ff','#ffb3ba', '#FAF8F6']
+// const colorSelection = ['#1D1C1A', '#ffdfba', '#ffffba', '#baffc9', '#bae1ff','#ffb3ba', '#FAF8F6']
+
+const colorSelection = ['#1D1C1A', "#edc951", "#eb6841", "#cc2a36", "#4f372d", "#00a0b0", "#FAF8F6"]
 
 // pixel canvas maker
 function makePixel() {
@@ -19,7 +21,8 @@ while (pixelCount < 256) {
 }
 
 // change pixel color
-pixelDisplay.addEventListener('mousedown', e => {
+pixelDisplay.addEventListener('pointerdown', e => {
+    e.preventDefault()
     e.target.style.backgroundColor = colorSelection[e.target.attributes.currentColor]
     if (e.target.attributes.currentColor < 6) {
         e.target.attributes.currentColor++
@@ -37,6 +40,7 @@ pixelDisplay.addEventListener('contextmenu', e => {
 
 // reset entire canvas
 resetBtn.addEventListener('click', e => {
+    e.preventDefault()
     pixelDisplay.childNodes.forEach(pixel => {
         pixel.attributes.currentColor = 0
         pixel.style.backgroundColor = '#FAF8F6'
@@ -47,18 +51,21 @@ resetBtn.addEventListener('click', e => {
 
 let mouseDown = false
 
-pixelDisplay.addEventListener('mousedown', e => {
-    mouseDown = true
+pixelDisplay.addEventListener('pointerdown', e => {
+    e.preventDefault()
+    pointerDown = true
 })
 
-pixelDisplay.addEventListener('mouseup', e => {
-    mouseDown = false
+pixelDisplay.addEventListener('pointerup', e => {
+    e.preventDefault()
+    pointerDown = false
 })
 
 let pixels = Array.from(pixelDisplay.children);
 
-pixels.forEach(pixel => pixel.addEventListener('mouseenter', e => {
-    if (mouseDown) {
+pixels.forEach(pixel => pixel.addEventListener('pointerenter', e => {
+    e.preventDefault()
+    if (pointerDown) {
         e.target.style.backgroundColor = colorSelection[e.target.attributes.currentColor]
         if (e.target.attributes.currentColor < 6) {
             e.target.attributes.currentColor++
