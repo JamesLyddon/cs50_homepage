@@ -99,8 +99,8 @@ nav ul li {
 /* pixel styles */
 #pixel-display {
     border: none;
-    width: 400px;
-    height: 400px;
+    width: 608px;
+    height: 608px;
     display: flex;
     flex-wrap: wrap;
 }
@@ -109,8 +109,8 @@ canvas {
     background-color: #FAF8F6;
     padding: 0;
     margin: 0;
-    height: 25px;
-    width: 25px;
+    height: 38px;
+    width: 38px;
 }
 
 /* number line styling */
