@@ -4,6 +4,12 @@ const plusBtn = document.querySelector('#plus')
 const line = document.querySelector('#line')
 const pointer = document.querySelector('#pointer')
 
+// disable touch functionality
+const wrapper = document.querySelector('.wrapper')
+wrapper.addEventListener('touchstart', e => {
+    e.preventDefault()
+}) 
+
 let currentNumber = 0
 
 // change number if pos of neg
@@ -44,14 +50,14 @@ function updateNumber() {
 }
 
 // increment number
-minusBtn.addEventListener('mousedown', e => {
+minusBtn.addEventListener('pointerdown', e => {
     if(currentNumber < -9) return
     currentNumber--
     updateNumber()
 })
 
 // decrement number
-plusBtn.addEventListener('mousedown', e => {
+plusBtn.addEventListener('pointerdown', e => {
     if(currentNumber > 9) return
     currentNumber++
     updateNumber()
@@ -81,6 +87,5 @@ for(let i = -10; i <= 10; i++) {
 
 // TODO - make numberline current number stand out (disappear - float to top?)
 // TODO - add transition and animations
-// TODO - host on github pages
 // TODO - refactor js
-// TODO - polish homepage and make sure all conditions are me
+// TODO - polish homepage and make sure all conditions are met
