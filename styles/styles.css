@@ -38,6 +38,11 @@ header {
     color: #FAF8F6;
 }
 
+[href] {
+    color: orangered;
+    margin-left: 1em;
+}
+
 header h1 {
     padding: 1rem;
     font-size: 4em;
@@ -87,7 +92,7 @@ nav {
     max-width: 60em;
 }
 
-nav ul {
+nav~ul {
     gap: 3em;
 }
 
